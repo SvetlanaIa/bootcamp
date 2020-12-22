@@ -1,3 +1,5 @@
+'''19 cows, 14 apples, 2 tables, a pig and an onion'''
+
 def count_things(words):
     vowels = ('a', 'e', 'o', 'i', 'u')
     words_set = set(words)   
@@ -14,7 +16,9 @@ def count_things(words):
             else:
                 i[0] = 'a ' + i[0]
             result.append(i[0])
-    return ' and '.join(result)
+    if len(words_set) > 1:
+        return ', '.join(result[:-1]) + ' and ' + result[-1]
+    return result[0]
 
 # при сортировке элементы с одинаковым количеством постоянно меняют последовательность ( т.к. для формирования количества использую set, нужно переписать код,
 # что бы последовательность ввода и вывода не изменялась?)
