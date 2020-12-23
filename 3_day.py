@@ -1,4 +1,5 @@
-def longest_substring(s,template):    
+def longest_substring(st,template):
+    s=st.lower()
     right = -1
     result = ''
     while right < len(s) - 1:
@@ -18,4 +19,4 @@ def longest_substring(s,template):
 
 print(longest_substring('abbaaaaaaazacc', 'abca')=='abbaaaaaaa')
 print(longest_substring('aaabbaabhtrabcddddb', 'abab') == 'aaabbaab')
-print(longest_substring('zacabazbc', 'zabc')=='zac')
+print(longest_substring('AAABBAABhtrabcddddb', 'abab') ==  'aaabbaab')
